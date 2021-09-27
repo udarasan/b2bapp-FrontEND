@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------ topBar-style ------------------------------------------------------ */
+
+.topBar-menu{
+    left: 600px;
+    position: relative;
+}
+
+#applicationUserName,#applicationUserID{
+    font-size: 13px;
+    padding: 0;
+    margin: 0 0 0 0;
+}
+
+.loginPanel {
+    padding: 100px;
+    border: solid #6c757d;
+    border-radius: 10px;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    width: 800px;
+}
+
+
+.loginPage {
+    /*background-color: #0b5ed7;*/
+    padding-top: 100px;
+}

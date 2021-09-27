@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">🖥 B2B System </a>
+            <div class="topBar-menu">
+                <a class="navbar-brand" href="#">Sell On B2B </a>
+                <a class="navbar-brand" href="#">My Dashboard </a>
+            </div>
+
+            <div>
+                <p class="navbar-brand" id="applicationUserName"> </p>
+                <p class="navbar-brand" id="applicationUserID"> </p>
+            </div>
+
+
+        </div>
+        <div class="">
+            <a class="navbar-brand" id="logOutButton" href="#"> login</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="loginPage">
+        <div class="container ">
+            <div class="col align-self-center loginPanel">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="loginButton">Login</button>
+                    <!--<a id="reset-login" href="#">Forgot Password ?</a>-->
+                </form>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+
+</footer>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/login.js"></script>
+<script src="../js/sweetalert2.all.min.js"></script>
+</body>
+</html>
