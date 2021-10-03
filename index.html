@@ -7,17 +7,22 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+<header>
+    <div id="nav-placeholder">
+    </div>
+</header>
+<main>
+    <h1>Home Page Here</h1>
+</main>
 
 
-
-
-
-
-
-
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/jquery-3.4.1.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/sweetalert2.all.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/sweetalert2.all.min.js"></script>
+<script>
+    $(function () {
+        $("#nav-placeholder").load("pages/navigation.html");
+    });
+</script>
 </body>
 </html>

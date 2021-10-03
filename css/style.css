@@ -11,8 +11,29 @@
     margin: auto;
     align-items: center;
     width: 50vw;
+    height: 40vh;
+}
+.createCustomerAccountPanel{
+    padding: 5%;
+    border: solid #6c757d;
+    border-radius: 10px;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    width: 50vw;
     height: 55vh;
 }
-
+.createVendorAccountPanel{
+    padding: 5%;
+    border: solid #6c757d;
+    border-radius: 10px;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    width: 50vw;
+    height: 55vh;
+}
 
 

@@ -8,22 +8,9 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <div class="container">
-            <div>
-                <a class="navbar-brand" href="#">🖥 B2B System </a>
-            </div>
-            <div class="topBar-menu">
-                <a class="navbar-brand" href="#">Sell On B2B </a>
-                <a class="navbar-brand" href="#">My Dashboard </a>
-            </div>
-            <div class="">
-                <a class="navbar-brand" id="logOutButton" href="#"> login</a>
-            </div>
+    <div id="nav-placeholder">
 
-        </div>
-
-    </nav>
+    </div>
 </header>
 
 <main class="main">
@@ -33,19 +20,20 @@
             <div class="col align-self-center loginPanel">
                 <form>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="loginInputEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="loginInputEmail" aria-describedby="emailHelp">
 
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword">
+                        <label for="loginInputPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginInputPassword">
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
                     <button type="button" class="btn btn-primary" id="loginButton">Login</button>
+                    <button type="button" class="btn btn-primary" id="createAccount">Create Account</button>
                     <!--<a id="reset-login" href="#">Forgot Password ?</a>-->
                 </form>
             </div>
@@ -53,24 +41,30 @@
     </div>
 
     <!--create account to customer-->
-    <div class="signUpPage">
+    <div class="createCustomerAccount">
         <div class="container ">
-            <div class="col align-self-center loginPanel">
+            <div class="col align-self-center createCustomerAccountPanel">
                 <form>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="fullCustomerName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullCustomerName">
 
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword">
+                        <label for="customerEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="customerEmail">
+
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <div class="mb-3">
+                        <label for="customerCNumber" class="form-label">Contact Number</label>
+                        <input type="number" class="form-control" id="customerCNumber">
+
                     </div>
-                    <button type="button" class="btn btn-primary" id="loginButton">Login</button>
+                    <div class="mb-3">
+                        <label for="customerPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="customerPassword">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="customerCreateAccButton">Create Account</button>
                     <!--<a id="reset-login" href="#">Forgot Password ?</a>-->
                 </form>
             </div>
@@ -78,24 +72,30 @@
     </div>
 
     <!--create account to vendor-->
-    <div class="signUpPage">
+    <div class="createVendorAccount">
         <div class="container ">
-            <div class="col align-self-center loginPanel">
+            <div class="col align-self-center createVendorAccountPanel">
                 <form>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="fullVendorName" class="form-label">Business Name</label>
+                        <input type="text" class="form-control" id="fullVendorName">
 
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword">
+                        <label for="vendorEmail" class="form-label">Business Email address</label>
+                        <input type="email" class="form-control" id="vendorEmail">
+
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <div class="mb-3">
+                        <label for="vendorCNumber" class="form-label">Contact Number</label>
+                        <input type="number" class="form-control" id="vendorCNumber">
+
                     </div>
-                    <button type="button" class="btn btn-primary" id="loginButton">Login</button>
+                    <div class="mb-3">
+                        <label for="vendorPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="vendorPassword">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="vendorCreateAccButton">Create Seller Account</button>
                     <!--<a id="reset-login" href="#">Forgot Password ?</a>-->
                 </form>
             </div>
@@ -111,5 +111,10 @@
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/login.js"></script>
 <script src="../js/sweetalert2.all.min.js"></script>
+<script>
+    $(function(){
+        $("#nav-placeholder").load("navigation.html");
+    });
+</script>
 </body>
 </html>
