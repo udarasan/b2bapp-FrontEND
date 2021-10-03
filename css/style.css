@@ -4,36 +4,74 @@
 }
 .loginPanel {
     padding: 5%;
-    border: solid #6c757d;
+
     border-radius: 10px;
     align-content: center;
     justify-content: center;
     margin: auto;
     align-items: center;
-    width: 50vw;
-    height: 40vh;
+    width: 30vw;
+    height: 50vh;
+    background-color: #EFF8F8;
 }
+
 .createCustomerAccountPanel{
     padding: 5%;
-    border: solid #6c757d;
+
     border-radius: 10px;
     align-content: center;
     justify-content: center;
     margin: auto;
     align-items: center;
-    width: 50vw;
-    height: 55vh;
+    width: 30vw;
+    height: 65vh;
+
+    background-color: #EFF8F8;
 }
 .createVendorAccountPanel{
     padding: 5%;
-    border: solid #6c757d;
     border-radius: 10px;
     align-content: center;
     justify-content: center;
     margin: auto;
     align-items: center;
-    width: 50vw;
-    height: 55vh;
+    width: 30vw;
+    height: 65vh;
+
+    background-color: #EFF8F8;
+}
+
+
+.login-toggle-section{
+    margin-bottom: 10px;
+}
+.toggle-button{
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+    background-color: #4CD964;
+
+
+}
+.toggle-button:hover{
+    background-color: #0ACF83;
+}
+.btn{
+    width: 100%;
+    background-color: #4CD964;
+    border: solid #4CD964;
+}
+.btn:hover{
+    width: 100%;
+    background-color: #0ACF83;
+    border: solid #0ACF83;
+}
+.login-page-title{
+    margin-bottom: 20px;
 }
 
 

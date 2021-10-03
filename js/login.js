@@ -23,6 +23,18 @@ function showCreateVendorAccount() {
     $('.createCustomerAccount').css({display: "none"});
     $('.createVendorAccount').css({display: "block"});
 }
+$('#toggle-button-1').click(function () {
+    showLogin();
+})
+$('#toggle-button-2').click(function () {
+    showCreateCustomerAccount();
+})
+$('#toggle-button-3').click(function () {
+    showLogin();
+})
+$('#toggle-button-4').click(function () {
+    showCreateCustomerAccount();
+})
 
 $('#createAccount').click(function () {
     showCreateCustomerAccount();
@@ -258,3 +270,4 @@ function createVendorAccount() {
     })
 
 }
+

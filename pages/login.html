@@ -8,16 +8,39 @@
 </head>
 <body>
 <header>
-    <div id="nav-placeholder">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container">
+            <div>
+                <a class="navbar-brand" href="#">🖥 B2B System </a>
+            </div>
+            <div class="topBar-menu">
+                <a class="navbar-brand" id="sellOnB2B" href="#">Sell On B2B </a>
+                <a class="navbar-brand" href="#">My Dashboard </a>
+            </div>
+            <div class="">
+                <a class="navbar-brand" id="topMenu-logButton" href="#"> login</a>
+            </div>
 
-    </div>
+        </div>
+    </nav>
+
 </header>
+
 
 <main class="main">
     <!--login to customer and vendor-->
     <div class="loginPage">
         <div class="container ">
             <div class="col align-self-center loginPanel">
+                <div class="login-page-title">
+                    <h1>Login Page</h1>
+                </div>
+                <div class="container">
+                    <div class="row login-toggle-section">
+                        <div class="col-sm-6 toggle-button"id="toggle-button-1">Login</div>
+                        <div class="col-sm-6 toggle-button"id="toggle-button-2">Sign Up</div>
+                    </div>
+                </div>
                 <form>
                     <div class="mb-3">
                         <label for="loginInputEmail" class="form-label">Email address</label>
@@ -33,8 +56,6 @@
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
                     <button type="button" class="btn btn-primary" id="loginButton">Login</button>
-                    <button type="button" class="btn btn-primary" id="createAccount">Create Account</button>
-                    <!--<a id="reset-login" href="#">Forgot Password ?</a>-->
                 </form>
             </div>
         </div>
@@ -44,6 +65,15 @@
     <div class="createCustomerAccount">
         <div class="container ">
             <div class="col align-self-center createCustomerAccountPanel">
+                <div class="login-page-title">
+                    <h1>SignUp Page</h1>
+                </div>
+                <div class="container">
+                <div class="row login-toggle-section">
+                    <div class="col-sm-6 toggle-button"id="toggle-button-3">Login</div>
+                    <div class="col-sm-6 toggle-button"id="toggle-button-4">Sign Up</div>
+                </div>
+                </div>
                 <form>
                     <div class="mb-3">
                         <label for="fullCustomerName" class="form-label">Full Name</label>
@@ -75,6 +105,9 @@
     <div class="createVendorAccount">
         <div class="container ">
             <div class="col align-self-center createVendorAccountPanel">
+                <div class="login-page-title">
+                    <h1> Create Your Seller Account</h1>
+                </div>
                 <form>
                     <div class="mb-3">
                         <label for="fullVendorName" class="form-label">Business Name</label>
@@ -95,7 +128,8 @@
                         <label for="vendorPassword" class="form-label">Password</label>
                         <input type="password" class="form-control" id="vendorPassword">
                     </div>
-                    <button type="button" class="btn btn-primary" id="vendorCreateAccButton">Create Seller Account</button>
+                    <button type="button" class="btn btn-primary" id="vendorCreateAccButton">Create Seller Account
+                    </button>
                     <!--<a id="reset-login" href="#">Forgot Password ?</a>-->
                 </form>
             </div>
@@ -111,10 +145,5 @@
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/login.js"></script>
 <script src="../js/sweetalert2.all.min.js"></script>
-<script>
-    $(function(){
-        $("#nav-placeholder").load("navigation.html");
-    });
-</script>
 </body>
 </html>
