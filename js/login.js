@@ -85,6 +85,9 @@ function loginFunction() {
                         showConfirmButton: false,
                         timer: 1500
                     })
+                    localStorage.setItem('email',email);
+                    localStorage.setItem('password',password)
+                    localStorage.setItem('userName',resp.data.fullName)
                     window.location.href = "../index.html";
                 } else if (resp.data.userType == "VENDOR") {
                     console.log(resp.data)
@@ -111,7 +114,29 @@ function loginFunction() {
                 })
             }
 
+        },
+        error: function (resp) {
+            if (resp.status === 400) {
+                console.log(resp.data)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: '"No User For This Email"',
+                    showDenyButton: false,
+                    timer: 1500
+
+                })
+            } else {
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'error',
+                    title: 'Wrong!',
+                    text: 'Network Error',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                })
+            }
         }
+
     })
 }
 

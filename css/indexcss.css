@@ -1,0 +1,164 @@
+#topNav{
+    background: #4CD964;
+    height: 40px;
+    width: auto;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 40px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+#topNav ul{
+    float: right;
+    margin-right: 20px;
+}
+#topNav ul li{
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 5px;
+}
+#topNav ul li a{
+    color: white;
+    font-size: 15px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.topA.active,.topA:hover{
+    background: #0ACF83;
+    transition: .5s;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    #topNav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4CD964;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    #topNav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    #topNav ul li a{
+        font-size: 20px;
+    }
+    .topA:hover,.topA.active{
+        background: none;
+        color: #0ACF83;
+    }
+}
+
+
+.header-main {
+    position: relative;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #ffffff
+}
+
+.logo {
+    color: #0ACF83;
+    font-size: 25px;
+    font-weight: 600
+}
+
+.brand-wrap {
+    text-decoration: none !important
+}
+
+.icon-sm {
+    width: 48px;
+    height: 48px;
+    line-height: 48px !important;
+    font-size: 20px
+}
+
+.widget-header {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative
+}
+
+.widget-header .notify {
+    position: absolute;
+    top: -3px;
+    right: -10px
+}
+
+
+
+.mr-3,
+.mx-3 {
+    margin-right: 1rem !important
+}
+
+.search-form {
+    border: 1px solid #0ACF83 !important
+}
+
+.search-button {
+    color: #ffffff;
+    background-color: #0ACF83;
+    border-color: #0ACF83;
+    height: 40px;
+
+}
+
+.navbar-main {
+    background-color: #fff
+}
+
+.navbar-toggler {
+    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.1) !important
+}
+
+.navbar-toggler {
+    padding: 4px;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.37rem
+}
+
+
+
+
+
+.nav-link {
+    text-transform: uppercase;
+    font-weight: 400
+}
+
+.vl {
+    border-left: 1px solid #fff;
+    height: 100%
+}
+
+.fas {
+    color: #fff
+}
+
+.login {
+    color: white
+}

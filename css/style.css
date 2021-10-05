@@ -4,14 +4,13 @@
 }
 .loginPanel {
     padding: 5%;
-
+    position: relative;
     border-radius: 10px;
     align-content: center;
     justify-content: center;
     margin: auto;
     align-items: center;
     width: 30vw;
-    height: 50vh;
     background-color: #EFF8F8;
 }
 
@@ -24,7 +23,6 @@
     margin: auto;
     align-items: center;
     width: 30vw;
-    height: 65vh;
 
     background-color: #EFF8F8;
 }
@@ -36,7 +34,6 @@
     margin: auto;
     align-items: center;
     width: 30vw;
-    height: 65vh;
 
     background-color: #EFF8F8;
 }
@@ -73,5 +70,7 @@
 .login-page-title{
     margin-bottom: 20px;
 }
+
+
 
 
