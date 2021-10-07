@@ -1,0 +1,43 @@
+.sidebar{
+    width: 250px;
+    background: #0a58ca;
+    position: fixed;
+    height: 100%;
+}
+.sidebar-label{
+    padding-left: 1rem;
+    height: 50px;
+    background-color: #a3eec7;
+}
+.sidebar-menu{
+    padding: 1rem;
+    height: 100%;
+}
+.main-bar{
+    position: sticky;
+    height: 50px;
+    width: 100%;
+    background: #0ACF83;
+    top: 0;
+}
+.private-section{
+    float: right;
+}
+.search-bar{
+    width: 150px;
+    height: 25px;
+    background-color: #ec5151;
+}
+.active-user-section{
+    width: 150px;
+    height: 25px;
+    background-color: white;
+}
+.main-content{
+    margin-left: 250px;
+    background: #0a7acf;
+    height: 100vh;
+}
+.main-content-section-1{
+    padding: 1rem;
+}
