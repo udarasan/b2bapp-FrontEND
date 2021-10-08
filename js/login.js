@@ -1,11 +1,9 @@
 hideAll();
-
 function hideAll() {
     $('.loginPage').css({display: "block"});
     $('.createCustomerAccount').css({display: "none"});
     $('.createVendorAccount').css({display: "none"});
 }
-
 function showLogin() {
     $('.loginPage').css({display: "block"});
     $('.createCustomerAccount').css({display: "none"});
@@ -85,9 +83,10 @@ function loginFunction() {
                         showConfirmButton: false,
                         timer: 1500
                     })
-                    localStorage.setItem('email',email);
-                    localStorage.setItem('password',password)
-                    localStorage.setItem('userName',resp.data.fullName)
+                    sessionStorage.setItem('email',email);
+                    sessionStorage.setItem('password',password)
+                    sessionStorage.setItem('userName',resp.data.fullName)
+                    sessionStorage.setItem('userType',resp.data.userType)
                     window.location.href = "../index.html";
                 } else if (resp.data.userType == "VENDOR") {
                     console.log(resp.data)
@@ -99,7 +98,12 @@ function loginFunction() {
                         timer: 1500
 
                     })
+                    sessionStorage.setItem('email',email);
+                    sessionStorage.setItem('password',password)
+                    sessionStorage.setItem('userName',resp.data.fullName)
+                    sessionStorage.setItem('userType',resp.data.userType)
                     window.location.href = "../pages/vendorDashBoard.html";
+                    console.log("hi vendor")
                 } else {
                     alert("Site admin Login")
                 }

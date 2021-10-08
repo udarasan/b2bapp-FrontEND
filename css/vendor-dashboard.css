@@ -23,20 +23,26 @@
 .private-section{
     float: right;
 }
-.search-bar{
-    width: 150px;
+.active-user-logout-section{
+    width:150px;
     height: 25px;
     background-color: #ec5151;
 }
+.active-user-logout-section a{
+    margin-left: 85px;
+}
+
 .active-user-section{
     width: 150px;
     height: 25px;
     background-color: white;
+    padding: 3px;
 }
 .main-content{
     margin-left: 250px;
     background: #0a7acf;
     height: 100vh;
+
 }
 .main-content-section-1{
     padding: 1rem;
