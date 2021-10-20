@@ -83,6 +83,7 @@ function loginFunction() {
                         showConfirmButton: false,
                         timer: 1500
                     })
+                    sessionStorage.setItem('userID',resp.data.userID);
                     sessionStorage.setItem('email',email);
                     sessionStorage.setItem('password',password)
                     sessionStorage.setItem('userName',resp.data.fullName)
@@ -98,6 +99,7 @@ function loginFunction() {
                         timer: 1500
 
                     })
+                    sessionStorage.setItem('userID',resp.data.userID);
                     sessionStorage.setItem('email',email);
                     sessionStorage.setItem('password',password)
                     sessionStorage.setItem('userName',resp.data.fullName)
