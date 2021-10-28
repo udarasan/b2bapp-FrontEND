@@ -2,9 +2,188 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Product Filter</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/indexcss.css" rel="stylesheet">
+    <link href="../css/filter.css" rel="stylesheet">
 </head>
 <body>
+<header>
+    <nav id="topNav">
+        <ul>
+            <li><a class="topA" href="../pages/vendorDashBoard.html">Seller Dashboard</a></li>
+            <li><a class="topA" href="../pages/login.html">Seller</a></li>
+            <li><a class="topA" href="../pages/login.html">Login</a></li>
+        </ul>
 
+    </nav>
+    <br>
+
+    <section class="header-main ">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-sm-3 col-md-3 col-5">
+                    <a href="#" class="brand-wrap" data-abc="true">
+                        <span class="logo container">B2B SYSTEM</span> </a></div>
+                <div class="col-lg-7  col-sm-7 col-md-7 d-none d-md-block">
+                    <form action="#" class="search-wrap">
+                        <div class="input-group"><input type="text" class="form-control search-form"
+                                                        style="width:55%;" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary search-button" type="submit"> Search<i
+                                        class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-2 col-sm-2 col-md-2 col-7">
+                    <div class="d-flex">
+                        <span class="vl"></span>
+                        <a class="nav-link nav-user-img" href="#" data-toggle="modal"
+                           data-target="#login-modal" data-abc="true">
+                            <span id="cart">Cart</span>
+                            <span id="cartItemCount">5</span>
+                            <h6 id="userName">#</h6>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+<main>
+    <section class="mb-3">
+        <div id="filterBanner">
+            <div class="container d-flex justify-content-center ">
+                <h2 class="text-light mt-5">Product Filter Page</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="d-flex container">
+        <div class="mx-2" id="filterSide">
+            <form>
+                <div class="row mb-3 mt-2">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Filter By Name">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Min :0">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Max : 100000">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Location">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary" onclick="filterProduct()">Filter</button>                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="" id="showSide">
+            <div class=" border m-2 d-flex">
+                <div class="productImage">
+                    <img src="../image/product/electronic-item-500x500.jpg" style="width: 150px;height: 150px">
+                </div>
+                <div class="productDescription">
+                    <h5>Product Name</h5>
+                    <div>
+                        <p class="productDecFont">description description description description description </p>
+                        <p class="productDecFont">Seller Name</p>
+                        <p class="productFont fw-bold">One Price : 300LKR</p>
+                        <p class="productFont fw-bold">Total price : 10000LKR</p>
+
+                    </div>
+
+                    <div>
+                        <button type="button"> Add to Card</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" border m-2 d-flex">
+                <div class="productImage">
+                    <img src="../image/product/electronic-item-500x500.jpg" style="width: 150px;height: 150px">
+                </div>
+                <div class="productDescription">
+                    <h5>Product Name</h5>
+                    <div>
+                        <p class="productDecFont">description description description description description </p>
+                        <p class="productDecFont">Seller Name</p>
+                        <p class="productFont fw-bold">One Price : 300LKR</p>
+                        <p class="productFont fw-bold">Total price : 10000LKR</p>
+
+                    </div>
+
+                    <div>
+                        <button type="button"> Add to Card</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" border m-2 d-flex">
+                <div class="productImage">
+                    <img src="../image/product/electronic-item-500x500.jpg" style="width: 150px;height: 150px">
+                </div>
+                <div class="productDescription">
+                    <h5>Product Name</h5>
+                    <div>
+                        <p class="productDecFont">description description description description description </p>
+                        <p class="productDecFont">Seller Name</p>
+                        <p class="productFont fw-bold">One Price : 300LKR</p>
+                        <p class="productFont fw-bold">Total price : 10000LKR</p>
+
+                    </div>
+
+                    <div>
+                        <button type="button"> Add to Card</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" border m-2 d-flex">
+                <div class="productImage">
+                    <img src="../image/product/electronic-item-500x500.jpg" style="width: 150px;height: 150px">
+                </div>
+                <div class="productDescription">
+                    <h5>Product Name</h5>
+                    <div>
+                        <p class="productDecFont">description description description description description </p>
+                        <p class="productDecFont">Seller Name</p>
+                        <p class="productFont fw-bold">One Price : 300LKR</p>
+                        <p class="productFont fw-bold">Total price : 10000LKR</p>
+
+                    </div>
+
+                    <div>
+                        <button type="button"> Add to Card</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/filter.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/sweetalert2.all.min.js"></script>
+<footer>
+
+</footer>
 </body>
+
 </html>

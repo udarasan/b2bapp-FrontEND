@@ -1,0 +1,11 @@
+#filterSide{
+    width: 40%;
+}
+#showSide{
+    width: 60%
+}
+#filterBanner{
+    width: 100%;
+    height: 150px;
+    background-color: #0c4128;
+}
