@@ -67,7 +67,7 @@ $('#addProduct').click(function () {
                         data: JSON.stringify({
                             'PID': "",
                             'productName': productName,
-                            'sellerID': sellerID,
+                            'sellerID': {"userID":sellerID},
                             'productDetail': productDetail,
                             'productQTy': productQTy,
                             'onePiecePrice': onePiecePrice,
