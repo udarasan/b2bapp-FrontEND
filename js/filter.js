@@ -1,5 +1,5 @@
 function filterProduct() {
-<<<<<<< HEAD
+
     $('.filterProductFrame').empty();
     let productName=$('#productName').val();
     let minPrice=$('#minPrice').val();
@@ -76,9 +76,9 @@ function filterProduct() {
         alert("please Fill the Basic req")
     }
 
+
+
+
+
 }
 
-=======
-    console.log("okbroh")
-}
->>>>>>> origin/master
