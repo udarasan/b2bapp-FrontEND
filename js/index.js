@@ -11,6 +11,7 @@ function loginCheck() {
         console.log(email, password, userName);
     }
 }
+
 /************************Load Home Page Products***************************/
 topSixProductLoader();
 
@@ -26,9 +27,9 @@ function topSixProductLoader() {
                     break;
                 }*/
                 //console.log(resp.data.length)
-                    //console.log(resp.data[2])
+                //console.log(resp.data[2])
 
-                let pid = product.PID;
+                let pid = product.pid;
                 let productName = product.productName;
                 let sellerID = (product.sellerID).fullName;
                 let productDetail = product.productDetail;
@@ -41,22 +42,24 @@ function topSixProductLoader() {
                 let productCategoryID = product.productCategoryID;
 
 
-
                 var card = " <div class=\" border w-50 h-25  m-2 p-2\">\n" +
                     "                <div class=\"productImage\">\n" +
                     "                    <img src=\"image/product/" + productImage + "\" style=\"width: 150px;height: 150px\">\n" +
                     "                </div>\n" +
                     "                <div  class=\"productDescription\">\n" +
-                    "                    <h5>" +
+                    "                    <h5 class=\"productname\">" +
                     productName +
                     "</h5>\n" +
                     "                    <div >\n" +
                     "                        <p  class=\"productDecFont pDetail\">" +
                     productDetail +
                     "</p>\n" +
+
+
                     "                        <p class=\"productDecFont fst-italic\">" +
-                    sellerID +
+                    sellerID + pid +
                     "</p>\n" +
+
                     "                        <p class=\"productFont fw-bold mt-1\">One Price : " +
                     onePiecePrice +
                     "LKR</p>\n" +
@@ -67,7 +70,7 @@ function topSixProductLoader() {
                     "                    </div>\n" +
                     "\n" +
                     "                    <div>\n" +
-                    "                        <button type=\"button\"> Add to Card</button>\n" +
+                    "                        <a class=\"btn add-to-cart\" data-pid=" + pid + " data-name=" + productName + " data-onePrice=" + onePiecePrice + " data-totlePrice=" + totalPrice + " data-image=" + productImage + " type=\"button\"> Add to Card</a>\n" +
                     "                    </div>\n" +
                     "                </div>\n" +
                     "\n" +
@@ -75,12 +78,38 @@ function topSixProductLoader() {
 
                 $('.productFrame').append(card);
 
-                    console.log(product)
-/************************Limt P tage Length***************************/
+                console.log(product)
+                /************************Limt P tage Length***************************/
                 var pDetail = $('.pDetail');
-                pDetail.text(pDetail.text().substring(0,50))
+                pDetail.text(pDetail.text().substring(0, 50))
+
             }
+            $(".add-to-cart").click(function (event) {
+                event.preventDefault();
+                var pid = $(this).attr("data-pid");
+                var name = $(this).attr("data-name");
+                var onePrice = $(this).attr("data-onePrice");
+                var totlePrice = $(this).attr("data-totlePrice");
+                var iamge = $(this).attr("data-image");
+                console.log(name)
+
+                let products = [];
+                if (localStorage.getItem('products')) {
+                    products = JSON.parse(localStorage.getItem('products'));
+                }
+                products.push({
+                    'productId': pid,
+                    'name': name,
+                    'onePrice': onePrice,
+                    totlePrice: totlePrice,
+                    image: iamge
+                });
+
+                localStorage.setItem('products', JSON.stringify(products));
+
+            });
         }
 
     })
 }
+
