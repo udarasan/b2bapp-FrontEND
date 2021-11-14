@@ -12,6 +12,14 @@ function loginCheck() {
     }
 }
 
+function countCartItems() {
+    var arrayFromStroage = JSON.parse(localStorage.getItem("products"));
+    var arrayLength = arrayFromStroage.length;
+    console.log(arrayLength)
+    $('#cartItemCount').text(arrayLength)
+}
+
+countCartItems()
 /************************Load Home Page Products***************************/
 topSixProductLoader();
 
@@ -107,6 +115,7 @@ function topSixProductLoader() {
 
                 localStorage.setItem('products', JSON.stringify(products));
 
+                countCartItems()
             });
         }
 

@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-lg-3 col-sm-3 col-md-3 col-5">
-                    <a href="#" class="brand-wrap" data-abc="true">
+                    <a href="../index.html" class="brand-wrap" data-abc="true">
                         <span class="logo container">B2B SYSTEM</span> </a></div>
                 <div class="col-lg-7  col-sm-7 col-md-7 d-none d-md-block">
                     <form action="#" class="search-wrap">
@@ -38,12 +38,16 @@
                 <div class="col-lg-2 col-sm-2 col-md-2 col-7">
                     <div class="d-flex">
                         <span class="vl"></span>
-                        <a class="nav-link nav-user-img" href="#" data-toggle="modal"
+                        <a class="nav-link nav-user-img" href="pages/cart.html" data-toggle="modal"
                            data-target="#login-modal" data-abc="true">
-                            <span id="cart">Cart</span>
-                            <span id="cartItemCount">5</span>
-                            <h6 id="userName">#</h6>
-
+                            <button id="cart" type="button" class="btn pt-0 pb-0 px-2" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                     fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                                <span id="cartItemCount">5</span>
+                                <h6 id="userName">#</h6>
+                            </button>
                         </a>
                     </div>
                 </div>
@@ -63,28 +67,9 @@
     <section class="d-flex container">
         <div class="container">
             <div class="row">
-                <div class="col-8">
-                    <div class="cartItemCard d-flex p-2 border">
-                        <div id="cartImage">
-                            <img src="../image/product/electronic-item-500x500.jpg" style="height: 100px; width: 100px">
-                        </div>
-                        <div class="w-75" id="productDetail">
-                            <div class="mx-2">
-                                <h5>Product Name</h5>
-                                <p class="productDecFont">description description description description description </p>
-                                <p class="productDecFont">Seller Name</p>
-                                <p class="productFont fw-bold">One Price : 300LKR</p>
-                                <p class="productFont fw-bold">Total price : 10000LKR</p>
-                            </div>
-                        </div>
-                        <div class=" w-25">
-                            <div class="quantity buttons_added">
-                                <input type="button" value="-" class="minus">
-                                <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="" style="width: 70px">
-                                <input type="button" value="+" class="plus">
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-8 cartItemCards">
+
+
                 </div>
                 <div class="col-4 bg-danger">col-4
                     <div class="bg-dark">
@@ -99,6 +84,7 @@
 <script src="../js/script.js"></script>
 <script src="../js/filter.js"></script>
 <script src="../js/index.js"></script>
+<script src="../js/cart..js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/sweetalert2.all.min.js"></script>
 <footer>
