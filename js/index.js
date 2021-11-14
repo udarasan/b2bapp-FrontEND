@@ -11,15 +11,24 @@ function loginCheck() {
         console.log(email, password, userName);
     }
 }
+allx();
+function allx(){
+    if (localStorage.getItem("products")===null){
+
+    }else {
+        countCartItems()
+    }
+}
 
 function countCartItems() {
+
     var arrayFromStroage = JSON.parse(localStorage.getItem("products"));
     var arrayLength = arrayFromStroage.length;
     console.log(arrayLength)
     $('#cartItemCount').text(arrayLength)
 }
 
-countCartItems()
+
 /************************Load Home Page Products***************************/
 topSixProductLoader();
 
