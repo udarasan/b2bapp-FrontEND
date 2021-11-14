@@ -83,11 +83,11 @@ function loginFunction() {
                         showConfirmButton: false,
                         timer: 1500
                     })
-                    sessionStorage.setItem('userID',resp.data.userID);
-                    sessionStorage.setItem('email',email);
-                    sessionStorage.setItem('password',password)
-                    sessionStorage.setItem('userName',resp.data.fullName)
-                    sessionStorage.setItem('userType',resp.data.userType)
+                    localStorage.setItem('userID',resp.data.userID);
+                    localStorage.setItem('email',email);
+                    localStorage.setItem('password',password)
+                    localStorage.setItem('userName',resp.data.fullName)
+                    localStorage.setItem('userType',resp.data.userType)
                     window.location.href = "../index.html";
                 } else if (resp.data.userType == "VENDOR") {
                     console.log(resp.data)
@@ -99,11 +99,11 @@ function loginFunction() {
                         timer: 1500
 
                     })
-                    sessionStorage.setItem('userID',resp.data.userID);
-                    sessionStorage.setItem('email',email);
-                    sessionStorage.setItem('password',password)
-                    sessionStorage.setItem('userName',resp.data.fullName)
-                    sessionStorage.setItem('userType',resp.data.userType)
+                    localStorage.setItem('userID',resp.data.userID);
+                    localStorage.setItem('email',email);
+                    localStorage.setItem('password',password)
+                    localStorage.setItem('userName',resp.data.fullName)
+                    localStorage.setItem('userType',resp.data.userType)
                     window.location.href = "../pages/vendorDashBoard.html";
                     console.log("hi vendor")
                 } else {

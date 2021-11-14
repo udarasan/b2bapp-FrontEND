@@ -1,9 +1,9 @@
 loginCheck();
 function loginCheck() {
-    let email=sessionStorage.getItem('email');
-    let password=sessionStorage.getItem('password');
-    let userName=sessionStorage.getItem('userName');
-    let userType=sessionStorage.getItem('userType');
+    let email=localStorage.getItem('email');
+    let password=localStorage.getItem('password');
+    let userName=localStorage.getItem('userName');
+    let userType=localStorage.getItem('userType');
 
     if (userType == "VENDOR"){
         console.log("ssss"+userName)
