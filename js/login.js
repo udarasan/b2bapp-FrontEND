@@ -301,4 +301,15 @@ function createVendorAccount() {
     })
 
 }
+function logout() {
+    localStorage.removeItem('userID');
+    localStorage.removeItem('email');
+    localStorage.removeItem('password');
+    localStorage.removeItem('userName');
+    localStorage.removeItem('userType');
+    localStorage.removeItem('products');
+    window.location.href = "../index.html";
+}
+
+
 

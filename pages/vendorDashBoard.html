@@ -4,73 +4,117 @@
     <meta charset="UTF-8">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/vendor-dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
 
     <title>Vendor DashBoard</title>
 </head>
 <body>
 <main>
     <div class="sidebar">
-        <div class="sidebar-label">
-            <h1><a href="../index.html">DashBoard </a> </h1>
+        <div class="sidebar-label "style="text-align: center;">
+            <h4><a href="../index.html" style="color: white;">B2B </a> </h4>
         </div>
         <div class="sidebar-menu">
             <ul>
-                <li> Dashboard</li>
-                <li> Product Management</li>
-                <li> Order Management</li>
+                <li class="listItem"> <a href="#">Dashboard</a></li>
+                <li class="listItem"> <a href="#">Product Management</a></li>
+                <li class="listItem"> <a href="#">Order Management</a></li>
             </ul>
         </div>
     </div>
     <div class="main-content">
         <div class="main-bar">
             <div class="private-section">
-                <div class="active-user-section" ><h6 id="vendorUserName"></h6></div>
+                <div class="active-user-section" >
+
+                    <h6 id="vendorUserName">
+                        <i class="fas fa-user"></i>
+                    </h6></div>
                 <div class="active-user-logout-section">
-                    <a type="button" class="logout">Log Out</a>
+
+                    <a type="button" class="logout" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Log Out</a>
                 </div>
             </div>
 
         </div>
         <div class="main-content-section">
             <div class="main-content-section-1">
+                <div>
+                    <h2 class="mb-3">PRODUCT MANAGEMENT</h2>
+                </div>
                 <div class="row">
                     <div class="col-sm-8">
                         <form>
                             <div class="row mb-4">
-                                <div class="col">
+                                <div class="col-2">
+                                    <label for="productName">Product ID</label>
+                                    <input type="text" class="form-control" placeholder="ex:123" id="productID" disabled>
+                                </div>
+                                <div class="col-5">
                                     <label for="productName">Product Name</label>
                                     <input type="text" class="form-control" placeholder="ex:ABC Product" id="productName">
                                 </div>
-                                <div class="col">
+                                <div class="col-5">
                                     <label for="productDetail">Product Detail</label>
                                     <input type="text" class="form-control" placeholder="ex:this cream for pimples" id="productDetail">
                                 </div>
+
                             </div>
                             <div class="row mb-4">
                                 <div class="col">
                                     <label for="productQTY">Product QTY</label>
-                                    <input type="number" class="form-control" placeholder="Product QTY" id="productQTY">
+                                    <input type="number" min="0" class="form-control" placeholder="Product QTY" id="productQTY">
                                 </div>
                                 <div class="col">
                                     <label for="onePiecePrice">Product One piece Price</label>
-                                    <input type="text" class="form-control" placeholder="ex:200.00" id="onePiecePrice">
+                                    <input type="number" min="0" class="form-control" placeholder="ex:200.00" id="onePiecePrice">
                                 </div>
                             </div>
                             <div class="row mb-4">
                                 <div class="col">
                                     <label for="productTotalPrice">Product Total Price</label>
-                                    <input type="text" class="form-control" placeholder="ex:100000.00" id="productTotalPrice">
+                                    <input type="number" min="0" class="form-control" placeholder="ex:100000.00" id="productTotalPrice">
                                 </div>
                                 <div class="col">
                                     <label for="productLocation">Product Location</label>
-                                    <input type="text" class="form-control" placeholder="ex:Kandy"id="productLocation">
+                                    <select class="form-select" aria-label="Default select example" id="productLocation">
+                                        <!--<option selected>Select Area</option>-->
+                                        <option value="Ampara">Ampara</option>
+                                        <option value="Anuradhapura">Anuradhapura</option>
+                                        <option value="Badulla">Badulla</option>
+                                        <option value="Batticaloa">Batticaloa</option>
+                                        <option value="Colombo">Colombo</option>
+                                        <option value="Galle">Galle</option>
+                                        <option value="Gampaha">Gampaha</option>
+                                        <option value="Hambanthota">Hambanthota</option>
+                                        <option value="Jaffna">Jaffna</option>
+                                        <option value="Kalutara">Kalutara</option>
+                                        <option value="Kandy">Kandy</option>
+                                        <option value="Kegalle">Kegalle</option>
+                                        <option value="Kilinochchi">Kilinochchi</option>
+                                        <option value="Kurunegala">Kurunegala</option>
+                                        <option value="Mannar">Mannar</option>
+                                        <option value="Matara">Matara</option>
+                                        <option value="Moneragale">Moneragale</option>
+                                        <option value="Mullaitivu">Mullaitivu</option>
+                                        <option value="Nuwara Eliya">Nuwara Eliya</option>
+                                        <option value="Polonnaruwa">Polonnaruwa</option>
+                                        <option value="Puttalam">Puttalam</option>
+                                        <option value="Rathnapura">Rathnapura</option>
+                                        <option value="Trincomalee">Trincomalee</option>
+                                        <option value="Vavuniya">Vavuniya</option>
+                                    </select>
+                                    <!--<input type="text" class="form-control" placeholder="ex:Kandy"id="productLocation">-->
                                 </div>
                             </div>
                             <div class="row mb-4">
                                 <div class="col">
                                     <label for="productCategory">Product Category</label>
                                     <select class="form-select" aria-label="Default select example" id="productCategory">
-                                        <option selected>Open this select menu</option>
+                                        <option selected>Uncategorized</option>
                                         <option value="Electronic" id="Electronic">Electronic</option>
                                         <option value="WomenFashion" id="WomenFashion">Women Fashion</option>
                                         <option value="MenFashion" id="MenFashion">Men Fashion</option>
@@ -87,9 +131,33 @@
                                 </div>
                             </div>
                             <button type="button" class="btn btn-primary" id="addProduct">Add Product</button>
+                            <button type="button" class="btn btn-danger" id="deleteProduct">Delete Product</button>
                         </form>
                     </div>
                     <div class="col-sm-4"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="table-section" style="overflow-y: scroll;height: 500px">
+                        <table class="table table-bordered border-primary table-hover">
+                            <thead class="table-dark">
+                            <tr>
+                                <th scope="col">PID</th>
+                                <th scope="col">Product Image</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Product Category</th>
+                                <th scope="col">Product One piece Price</th>
+                                <th scope="col">Product Total Price</th>
+                                <th scope="col">Product QTY</th>
+                                <th scope="col">Product Detail</th>
+                                <th scope="col">Product Location</th>
+                            </tr>
+                            </thead>
+                            <tbody id="productTable">
+
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
             <div class="main-content-section-1">

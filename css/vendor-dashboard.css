@@ -1,13 +1,15 @@
 .sidebar{
     width: 250px;
-    background: #0a58ca;
+    background: #1c1919;
     position: fixed;
     height: 100%;
+
 }
 .sidebar-label{
     padding-left: 1rem;
     height: 50px;
-    background-color: #a3eec7;
+    background-color: #1c1919;
+
 }
 .sidebar-menu{
     padding: 1rem;
@@ -17,33 +19,37 @@
     position: sticky;
     height: 50px;
     width: 100%;
-    background: #0ACF83;
+    background: #1c1919;
     top: 0;
 }
 .private-section{
     float: right;
 }
 .active-user-logout-section{
-    width:150px;
+    width:200px;
     height: 25px;
-    background-color: #ec5151;
+    background-color: #1c1919;
 }
 .active-user-logout-section a{
-    margin-left: 85px;
+    margin-left: 5px;
 }
 
 .active-user-section{
-    width: 150px;
+    width: 200px;
     height: 25px;
-    background-color: white;
+    background-color: #1c1919;
     padding: 3px;
+    color: white;
 }
 .main-content{
     margin-left: 250px;
-    background: #d6eaff;
+    background: #ffffff;
     height: 100vh;
 
 }
 .main-content-section-1{
     padding: 1rem;
+}
+.listItem{
+    color: white;
 }
