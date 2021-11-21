@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Product Filter</title>
+    <title>Category Page</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/indexcss.css" rel="stylesheet">
-    <link href="../css/filter.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="../css/category.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
 
 </head>
 <body>
@@ -21,6 +23,7 @@
 
     </nav>
     <br>
+
     <section class="header-main ">
         <div class="container-fluid">
             <div class="row align-items-center">
@@ -41,9 +44,9 @@
                 <div class="col-lg-2 col-sm-2 col-md-2 col-7">
                     <div class="d-flex">
                         <span class="vl"></span>
-                        <a class="nav-link nav-user-img" href="cart.html" data-toggle="modal"
+                        <a class="nav-link nav-user-img" href="../pages/cart.html" data-toggle="modal"
                            data-target="#login-modal" data-abc="true">
-                            <button id="cart" type="button" class="btn pt-0 pb-0 px-2" >
+                            <button id="cart" type="button" class="btn pt-0 pb-0 px-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                      fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
@@ -54,52 +57,103 @@
                         </a>
                     </div>
                 </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-sm-3 col-md-3 col-5">
-                    </div>
-                    <div class="col-lg-7  col-sm-7 col-md-7 d-none d-md-block">
-                        <ul class="d-flex" style="list-style-type:none;">
-                            <li class="mx-2"><a href="../pages/filter.html" style="color: black;text-decoration: none">PRODUCTS FILTER </a></li>
-                            <li class="mx-2"><a href="../pages/shops.html" style="color: black;text-decoration: none">All SHOPS </a></li>
-                            <li class="mx-2"><a href="../pages/cart.html" style="color: black;text-decoration: none">CART </a></li>
-                            <li class="mx-2"><a href="#" style="color: black;text-decoration: none">CATEGORY </a></li>
-                            <li class="mx-2"><a href="#" style="color: black;text-decoration: none">NEW </a></li>
-                            <li class="mx-2"><a href="#" style="color: black;text-decoration: none">NEW </a></li>
-                            <li class="mx-2"><a href="#" style="color: black;text-decoration: none">NEW </a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-md-2 col-7">
-                    </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-sm-3 col-md-3 col-5">
+                </div>
+                <div class="col-lg-7  col-sm-7 col-md-7 d-none d-md-block">
+                    <ul class="d-flex" style="list-style-type:none;">
+                        <li class="mx-2"><a href="../pages/filter.html" style="color: black;text-decoration: none">PRODUCTS
+                            FILTER </a></li>
+                        <li class="mx-2"><a href="../pages/shops.html" style="color: black;text-decoration: none">All
+                            SHOPS </a></li>
+                        <li class="mx-2"><a href="../pages/cart.html"
+                                            style="color: black;text-decoration: none">CART </a></li>
+                        <li class="mx-2"><a href="#" style="color: black;text-decoration: none">CATEGORY </a></li>
+                        <li class="mx-2"><a href="#" style="color: black;text-decoration: none">NEW </a></li>
+                        <li class="mx-2"><a href="#" style="color: black;text-decoration: none">NEW </a></li>
+                        <li class="mx-2"><a href="#" style="color: black;text-decoration: none">NEW </a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-2 col-md-2 col-7">
                 </div>
             </div>
         </div>
     </section>
 </header>
+
 <main>
     <section class="mb-3">
         <div id="filterBanner">
             <div class="container d-flex justify-content-center ">
-                <h2 class="text-light mt-5">All Shop Page</h2>
+                <h2 class="text-light mt-5">Category Us Page</h2>
+            </div>
+        </div>
+    </section>
+    <section class="container d-flex">
+        <div class="mx-2" id="filterSide">
+            <form>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="productCategory">Product Category</label>
+                        <select class="form-select" aria-label="Default select example" id="productCategory">
+                            <option value="Anuradhapura">Anuradhapura</option>
+                            <option value="vegetables">Vegetables</option>
+                            <option value="Badulla">Badulla</option>
+                            <option value="Batticaloa">Batticaloa</option>
+                            <option value="Colombo">Colombo</option>
+                            <option value="Galle">Galle</option>
+                            <option value="Gampaha">Gampaha</option>
+                            <option value="Hambanthota">Hambanthota</option>
+                            <option value="Jaffna">Jaffna</option>
+                            <option value="Kalutara">Kalutara</option>
+                            <option value="Kandy">Kandy</option>
+                            <option value="Kegalle">Kegalle</option>
+                            <option value="Kilinochchi">Kilinochchi</option>
+                            <option value="Kurunegala">Kurunegala</option>
+                            <option value="Mannar">Mannar</option>
+                            <option value="Matara">Matara</option>
+                            <option value="Moneragale">Moneragale</option>
+                            <option value="Mullaitivu">Mullaitivu</option>
+                            <option value="Nuwara Eliya">Nuwara Eliya</option>
+                            <option value="Polonnaruwa">Polonnaruwa</option>
+                            <option value="Puttalam">Puttalam</option>
+                            <option value="Rathnapura">Rathnapura</option>
+                            <option value="Trincomalee">Trincomalee</option>
+                            <option value="Vavuniya">Vavuniya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary" onclick="CategoryWiseProductLoader()">Filter
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="filterProductFrame" id="showSide">
+            <div class="productFrameForCategory d-flex">
+
             </div>
         </div>
     </section>
 
-    <section class="container mt-5 d-flex">
-        <div class="shopFrame d-flex m-3">
-
-        </div>
-    </section>
 </main>
+
+<!----------------------------Footer section here----------------------->
+
 <footer class="footer mt-5">
     <div class="container bottom_border">
         <div class="row">
             <div class=" col-sm-4 col-md col-sm-4  col-12 col">
                 <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
                 <!--headin5_amrc-->
-                <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s</p>
                 <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
-                <p><i class="fa fa-phone"></i>  +91-9999878398  </p>
-                <p><i class="fa fa fa-envelope"></i> info@example.com  </p>
+                <p><i class="fa fa-phone"></i> +91-9999878398 </p>
+                <p><i class="fa fa fa-envelope"></i> info@example.com </p>
 
 
             </div>
@@ -140,9 +194,15 @@
                 <!--headin5_amrc ends here-->
 
                 <ul class="footer_ul2_amrc">
-                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
-                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
-                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                        <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
+                        </p></li>
+                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                        <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
+                        </p></li>
+                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                        <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
+                        </p></li>
                 </ul>
                 <!--footer_ul2_amrc ends here-->
             </div>
@@ -172,12 +232,10 @@
     </div>
 
 </footer>
+
 <script src="../js/jquery-3.4.1.min.js"></script>
-<script src="../js/script.js"></script>
-<script src="../js/shop.js"></script>
-<script src="../js/index.js"></script>
+<script src="../js/category.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/sweetalert2.all.min.js"></script>
-
 </body>
 </html>
