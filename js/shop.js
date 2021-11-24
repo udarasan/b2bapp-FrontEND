@@ -14,7 +14,7 @@ function topSixProductLoader() {
                 let email =user.email ;
                 let fullName = user.fullName;
 
-                var card =" <div class=\" border p-2 m-2\">\n" +
+                var card =" <div class=\" border p-5 m-2\">\n" +
                     "                <div class=\"shopImage\" style=\"text-align: center\">\n" +
                     "                    <img src=\"../image/shops/429324.png\" style=\"width: 120px;height: 120px;border-radius: 100%;border: solid\" >\n" +
                     "                </div>\n" +
