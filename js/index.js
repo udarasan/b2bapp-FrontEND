@@ -11,21 +11,41 @@ function loginCheck() {
         console.log(email, password, userName);
     }
 }
-allx();
+/*allx();
 function allx(){
     if (localStorage.getItem("products")===null){
 
     }else {
         countCartItems()
     }
+}*/
+
+function logout() {
+    localStorage.removeItem('userID');
+    localStorage.removeItem('email');
+    localStorage.removeItem('password');
+    localStorage.removeItem('userName');
+    localStorage.removeItem('userType');
+    localStorage.removeItem('products');
+    window.location.href = "index.html";
 }
 
+countCartItems();
 function countCartItems() {
 
-    var arrayFromStroage = JSON.parse(localStorage.getItem("products"));
-    var arrayLength = arrayFromStroage.length;
-    console.log(arrayLength)
-    $('#cartItemCount').text(arrayLength)
+
+    $.ajax({
+        method: "GET",
+        url: "http://localhost:8080/api/v1/cart/itemCount/"+localStorage.getItem('userID'),
+        success: function (resp) {
+            console.log(resp);
+            $('#cartItemCount').text(resp.data)
+        }
+
+    })
+
+
+
 }
 
 
@@ -109,28 +129,24 @@ function topSixProductLoader() {
                 var totlePrice = $(this).attr("data-totlePrice");
                 var iamge = $(this).attr("data-image");
                 var uid=localStorage.getItem('userID')
-                console.log(name)
+                var qty=1;
+                saveProduct(pid,name,onePrice,totlePrice,iamge,uid,qty);
+                /*if (uid==null){
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'error',
+                        title: '"Please Login To Your Account"',
+                        showDenyButton: false,
+                        timer: 1500
 
-                let products = [];
-                if (localStorage.getItem('products')) {
-                    products = JSON.parse(localStorage.getItem('products'));
-                }
-                if (localStorage.getItem('userID')==null){
-                    alert('please login!')
+                    })
                 }else {
-                    products.push({
-                        'userID':uid,
-                        'productId': pid,
-                        'name': name,
-                        'onePrice': onePrice,
-                        totlePrice: totlePrice,
-                        image: iamge
-                    });
+                    saveProduct(pid,name,onePrice,totlePrice,iamge,uid,qty);
+                }*/
 
-                    localStorage.setItem('products', JSON.stringify(products));
 
-                    countCartItems()
-                }
+
+
             });
         }
 
@@ -140,6 +156,8 @@ function topSixProductLoader() {
 
 /************************Load Home Page Products***************************/
 AllProductLoader();
+
+
 
 function AllProductLoader() {
     $.ajax({
@@ -218,9 +236,23 @@ function AllProductLoader() {
                 var totlePrice = $(this).attr("data-totlePrice");
                 var iamge = $(this).attr("data-image");
                 var uid=localStorage.getItem('userID');
+                var qty=1;
                 console.log(name)
+                saveProduct(pid,name,onePrice,totlePrice,iamge,uid,qty);
+                /*if (uid==null){
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'error',
+                        title: '"Please Login To Your Account"',
+                        showDenyButton: false,
+                        timer: 1500
 
-                let products = [];
+                    })
+                }else {
+                    saveProduct(pid,name,onePrice,totlePrice,iamge,uid,qty);
+                }*/
+
+               /* let products = [];
                 if (localStorage.getItem('products')) {
                     products = JSON.parse(localStorage.getItem('products'));
                 }
@@ -239,7 +271,7 @@ function AllProductLoader() {
                     localStorage.setItem('products', JSON.stringify(products));
 
                     countCartItems()
-                }
+                }*/
 
             });
         }
@@ -304,7 +336,7 @@ function AllProductLoader3() {
                     "                    </div>\n" +
                     "\n" +
                     "                    <div>\n" +
-                    "                        <a class=\"btn add-to-cart2 mt-3\" data-pid=" + pid + " data-name=" + productName + " data-onePrice=" + onePiecePrice + " data-totlePrice=" + totalPrice + " data-image=" + productImage + " type=\"button\"> Add to Card</a>\n" +
+                    "                        <a class=\"btn add-to-cart3 mt-3\" data-pid=" + pid + " data-name=" + productName + " data-onePrice=" + onePiecePrice + " data-totlePrice=" + totalPrice + " data-image=" + productImage + " type=\"button\"> Add to Card</a>\n" +
                     "                    </div>\n" +
                     "                </div>\n" +
                     "\n" +
@@ -318,7 +350,7 @@ function AllProductLoader3() {
                 pDetail.text(pDetail.text().substring(0, 50))
 
             }
-            $(".add-to-cart2").click(function (event) {
+            $(".add-to-cart3").click(function (event) {
                 event.preventDefault();
                 var pid = $(this).attr("data-pid");
                 var name = $(this).attr("data-name");
@@ -326,28 +358,21 @@ function AllProductLoader3() {
                 var totlePrice = $(this).attr("data-totlePrice");
                 var iamge = $(this).attr("data-image");
                 var uid=localStorage.getItem('userID');
-                console.log(name)
+                var qty=1;
 
-                let products = [];
-                if (localStorage.getItem('products')) {
-                    products = JSON.parse(localStorage.getItem('products'));
-                }
-                if (localStorage.getItem('userID')==null){
-                    alert('please login!')
+                saveProduct(pid,name,onePrice,totlePrice,iamge,uid,qty);
+                /*if (uid==null){
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'error',
+                        title: '"Please Login To Your Account"',
+                        showDenyButton: false,
+                        timer: 1500
+
+                    })
                 }else {
-                    products.push({
-                        'userID':uid,
-                        'productId': pid,
-                        'name': name,
-                        'onePrice': onePrice,
-                        totlePrice: totlePrice,
-                        image: iamge
-                    });
-
-                    localStorage.setItem('products', JSON.stringify(products));
-
-                    countCartItems()
-                }
+                    saveProduct(pid,name,onePrice,totlePrice,iamge,uid,qty);
+                }*/
 
             });
         }
@@ -355,4 +380,69 @@ function AllProductLoader3() {
     })
 }
 
+function saveProduct(pid, name, onePrice, totlePrice, iamge, uid, qty) {
+    console.log(pid, name, onePrice, totlePrice, iamge, uid, qty)
+    if (uid==null){
+        Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: '"Please Login To Your Account"',
+            showDenyButton: false,
+            timer: 1500
+
+        })
+    }else {
+        $.ajax({
+            method: "POST",
+            contentType: "application/json",
+            async: true,
+            url: "http://localhost:8080/api/v1/cart/addProductToCart",
+            data: JSON.stringify({
+                'cid':'',
+                'pid': pid,
+                'name': name,
+                'onePrice': onePrice,
+                'totlePrice': totlePrice,
+                'iamge': iamge,
+                'uid': uid,
+                'qty': qty
+            }),
+            success:function (resp) {
+                if (resp.code==201){
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Add To Cart',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    countCartItems();
+                }
+            },
+            error: function (resp) {
+                if (resp.status === 400) {
+                    console.log(resp.data)
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'error',
+                        title: '"Are You Logout?"',
+                        showDenyButton: false,
+                        timer: 1500
+
+                    })
+                } else {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'error',
+                        title: 'Wrong!',
+                        text: 'Network Error',
+                        footer: '<a href="">Why do I have this issue?</a>'
+                    })
+                }
+            }
+
+        })
+    }
+
+}
 

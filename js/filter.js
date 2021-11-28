@@ -21,7 +21,7 @@ function filterProduct() {
                         $('.filterProductFrame').append(message);
                 }else {
                     for (let product of resp.data) {
-                        let pid = product.PID;
+                        let pid = product.pid;
                         let productName = product.productName;
                         let sellerID = (product.sellerID).fullName;
                         let productDetail = product.productDetail;
@@ -42,7 +42,7 @@ function filterProduct() {
                             "\" style=\"width: 150px;height: 150px\">\n" +
                             "                </div>\n" +
                             "                <div class=\"productDescription\">\n" +
-                            "                    <h5>" +
+                            "                    <h5 class=\"productname\">" +
                             productName +
                             "</h5>\n" +
                             "                    <div>\n" +
@@ -50,7 +50,7 @@ function filterProduct() {
                             productDetail +
                             "</p>\n" +
                             "                        <p class=\"productDecFont\">" +
-                            sellerID +
+                            sellerID +pid+
                             "</p>\n" +
                             "                        <p class=\"productFont fw-bold\">One Price : " +
                             onePiecePrice +
@@ -62,7 +62,7 @@ function filterProduct() {
                             "                    </div>\n" +
                             "\n" +
                             "                    <div>\n" +
-                            "                        <button type=\"button\"> Add to Card</button>\n" +
+                            "                        <a class=\"btn add-to-cart5 mt-3\" data-pid=" + pid + " data-name=" + productName + " data-onePrice=" + onePiecePrice + " data-totlePrice=" + totalPrice + " data-image=" + productImage + " type=\"button\"> Add to Card</a>\n" +
                             "                    </div>\n" +
                             "                </div>\n" +
                             "\n" +
@@ -74,6 +74,33 @@ function filterProduct() {
                         /* /!************************Limt P tage Length***************************!/
                          var pDetail = $('.pDetail');
                          pDetail.text(pDetail.text().substring(0,50))*/
+                        $(".add-to-cart5").click(function (event) {
+                            event.preventDefault();
+                            var pid = $(this).attr("data-pid");
+                            var name = $(this).attr("data-name");
+                            var onePrice = $(this).attr("data-onePrice");
+                            var totlePrice = $(this).attr("data-totlePrice");
+                            var iamge = $(this).attr("data-image");
+                            var uid=localStorage.getItem('userID')
+                            var qty=1;
+                            saveProduct(pid,name,onePrice,totlePrice,iamge,uid,qty);
+                            /*if (uid==null){
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'error',
+                                    title: '"Please Login To Your Account"',
+                                    showDenyButton: false,
+                                    timer: 1500
+
+                                })
+                            }else {
+                                saveProduct(pid,name,onePrice,totlePrice,iamge,uid,qty);
+                            }*/
+
+
+
+
+                        });
                     }
                 }
 

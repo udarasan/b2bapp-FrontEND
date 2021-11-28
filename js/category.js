@@ -73,28 +73,9 @@ function CategoryWiseProductLoader() {
                 var totlePrice = $(this).attr("data-totlePrice");
                 var iamge = $(this).attr("data-image");
                 var uid=localStorage.getItem('userID')
-                console.log(name)
+                var qty=1;
 
-                let products = [];
-                if (localStorage.getItem('products')) {
-                    products = JSON.parse(localStorage.getItem('products'));
-                }
-                if (localStorage.getItem('userID')==null){
-                    alert('please login!')
-                }else {
-                    products.push({
-                        'userID':uid,
-                        'productId': pid,
-                        'name': name,
-                        'onePrice': onePrice,
-                        totlePrice: totlePrice,
-                        image: iamge
-                    });
-
-                    localStorage.setItem('products', JSON.stringify(products));
-
-                    countCartItems()
-                }
+                saveProduct(pid,name,onePrice,totlePrice,iamge,uid,qty);
             });
         }
 

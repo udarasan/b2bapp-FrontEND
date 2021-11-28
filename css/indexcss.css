@@ -222,11 +222,14 @@ label.logo {
 
 
 #second-banner {
-    width: 100vm;
+    width: 100%;
     height: 300px;
-    background-color: #0c4128;
+    background-color: #ff3c00;
 }
-
+#second-banner >img{
+    width: 100%;
+    height: 300px;
+}
 
 /*Footer css*/
 .col_white_amrc {
@@ -387,7 +390,7 @@ slider csss
 
 div#slider {
     overflow: hidden;
-    height: 350px
+    height: 500px;
 }
 
 div#slider figure img {
